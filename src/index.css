@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+    font-family: 'Quicksand', 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 font-bold tracking-tight;
+  }
+  p {
+    @apply text-gray-700;
+  }
+  input, textarea, select {
+    @apply text-gray-900;
+  }
+  input::placeholder, textarea::placeholder {
+    @apply text-gray-400;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #F4F6FA; }
+::-webkit-scrollbar-thumb { background: #3BB77E; border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: #1a2e26; }
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin-slow {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 2s linear infinite;
+}
+
+/* Image zoom */
+.zoom-hover {
+  @apply transition-transform duration-500 ease-in-out;
+}
+.zoom-hover:hover {
+  transform: scale(1.08);
+}
