@@ -36,28 +36,7 @@ const Hero = () => {
             </p>
 
             {/* Newsletter Subscription */}
-            {subscribed ? (
-              <div className="inline-block bg-brand/10 border border-brand/20 text-brand px-5 py-3 rounded-2xl text-sm font-bold animate-bounce">
-                🎉 Thank you for subscribing! We've sent a 10% coupon to your inbox.
-              </div>
-            ) : (
-              <form onSubmit={handleSubscribe} className="flex bg-white rounded-full p-1 border border-gray-100 shadow-sm max-w-md">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  className="bg-transparent pl-5 pr-2 py-3.5 text-sm text-brand-dark placeholder-textColor-muted outline-none w-full font-medium"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <button
-                  type="submit"
-                  className="bg-brand hover:bg-brand-dark text-white px-8 rounded-full font-bold text-sm tracking-wide transition-all shadow-md shadow-brand/10 shrink-0"
-                >
-                  Subscribe
-                </button>
-              </form>
-            )}
+          
           </div>
 
           {/* Right Image */}

@@ -157,59 +157,7 @@ const AuthModal = ({ open, setOpen, mode = 'login', setMode }) => {
           </button>
         </form>
 
-        {/* Divider */}
-        <div className="relative flex items-center justify-center my-6">
-          <div className="absolute inset-0 flex items-center">
-            <div className="w-full border-t border-gray-100"></div>
-          </div>
-          <span className="relative px-3 bg-white text-[10px] font-extrabold text-textColor-muted tracking-widest uppercase">
-            OR SIGN IN WITH
-          </span>
-        </div>
-
-        {/* Google OAuth Button block */}
-        <div className="space-y-2.5">
-          {/* Real Google OAuth Login (Hidden if no client ID is in Vite, but left ready) */}
-          <div className="flex justify-center">
-            <GoogleLogin
-              onSuccess={handleGoogleSuccess}
-              onError={handleGoogleFailure}
-              useOneTap
-              theme="outline"
-              size="large"
-              shape="circle"
-              width="320"
-            />
-          </div>
-
-          {/* Quick Mock Google login button for immediate testing */}
-          <button
-            onClick={handleMockGoogleLogin}
-            type="button"
-            className="w-full bg-white hover:bg-gray-50 border border-gray-200 text-brand-dark py-3.5 rounded-xl font-extrabold text-xs tracking-wide transition-all flex items-center justify-center gap-2"
-          >
-            <svg className="w-4 h-4" viewBox="0 0 24 24">
-              <path
-                fill="#EA4335"
-                d="M12 5.04c1.62 0 3.08.56 4.22 1.66l3.15-3.15C17.45 1.71 14.93 1 12 1 7.35 1 3.39 3.65 1.5 7.5l3.9 3.03C6.35 7.42 9.01 5.04 12 5.04z"
-              />
-              <path
-                fill="#4285F4"
-                d="M23.49 12.27c0-.82-.07-1.6-.21-2.36H12v4.47h6.46c-.28 1.48-1.12 2.73-2.38 3.58l3.69 2.87c2.16-1.99 3.72-4.94 3.72-8.56z"
-              />
-              <path
-                fill="#FBBC05"
-                d="M5.4 10.53a7.19 7.19 0 0 1 0 4.14l-3.9 3.03C.54 15.65 0 13.89 0 12s.54-3.65 1.5-5.7l3.9 3.03z"
-              />
-              <path
-                fill="#34A853"
-                d="M12 23c3.24 0 5.97-1.08 7.96-2.91l-3.69-2.87c-1.02.68-2.33 1.09-3.96 1.09-2.99 0-5.65-2.38-6.6-5.49L1.8 15.85C3.69 19.7 7.65 23 12 23z"
-              />
-            </svg>
-            Mock Google Sign-In
-          </button>
-        </div>
-
+       
         {/* Modal Toggle link */}
         <div className="text-center mt-6 text-xs font-semibold text-textColor-body">
           {mode === 'login' ? (
